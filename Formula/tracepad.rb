@@ -5,21 +5,21 @@
 class Tracepad < Formula
   desc "LLM observability and evals in a single binary"
   homepage "https://github.com/tracepad/tracepad"
-  version "0.1.2"
+  version "0.1.3"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/tracepad/tracepad/releases/download/v0.1.2/tracepad_0.1.2_darwin_amd64.tar.gz"
-      sha256 "694a198fba54795e8d27b21fe8d124af422b3fb388c0e562869ba73e0b867ae6"
+      url "https://github.com/tracepad/tracepad/releases/download/v0.1.3/tracepad_0.1.3_darwin_amd64.tar.gz"
+      sha256 "5a62aec2d34986ae7f8ea448f0c48f29a696f8df7532a92342a90523512f539d"
 
       define_method(:install) do
         bin.install "tracepad"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/tracepad/tracepad/releases/download/v0.1.2/tracepad_0.1.2_darwin_arm64.tar.gz"
-      sha256 "96ba91910d8ad5730eda4d1ba7bfd97df8b18cc2e185ba86d9921c93752a4976"
+      url "https://github.com/tracepad/tracepad/releases/download/v0.1.3/tracepad_0.1.3_darwin_arm64.tar.gz"
+      sha256 "a5a1a3c16915cb85217602213c375404fa7e0ca03fe04ab159764e55700c5427"
 
       define_method(:install) do
         bin.install "tracepad"
@@ -29,15 +29,15 @@ class Tracepad < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tracepad/tracepad/releases/download/v0.1.2/tracepad_0.1.2_linux_amd64.tar.gz"
-      sha256 "d307242ed8072f35fccefe66005ba613ca321b877db275ac0d60d6fe8ddb8b6f"
+      url "https://github.com/tracepad/tracepad/releases/download/v0.1.3/tracepad_0.1.3_linux_amd64.tar.gz"
+      sha256 "f45028db6e8a573656b5a1c2a3947dd63c71505a0854291a7d51de59d4e6c84c"
       define_method(:install) do
         bin.install "tracepad"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/tracepad/tracepad/releases/download/v0.1.2/tracepad_0.1.2_linux_arm64.tar.gz"
-      sha256 "256c0e54b55bec6d7f7b71d6d002a180088bca08138a974cb18fbfcd9e980576"
+      url "https://github.com/tracepad/tracepad/releases/download/v0.1.3/tracepad_0.1.3_linux_arm64.tar.gz"
+      sha256 "ce49da934b347e65e8ab776ed9af81b583cabe314b576118537070cd9d5d49df"
       define_method(:install) do
         bin.install "tracepad"
       end
